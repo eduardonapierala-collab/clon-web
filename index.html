@@ -1,1 +1,406 @@
-<p>HOLA MUNDO</p>
+<!doctype html>
+<html lang="es">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="robots" content="noindex, nofollow">
+  <title>Rori — Vista previa de banners</title>
+  <meta name="description" content="Réplica estática de la estructura de rori.com para previsualizar banners actualizados.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/uikit@3.21.9/dist/css/uikit.min.css">
+  <link rel="stylesheet" href="css/styles.css?v=promo-ratio">
+</head>
+<body>
+
+  <header class="site-header">
+    <div class="topbar">
+      <div class="container topbar-inner">
+        <div class="topbar-left">
+          <a class="logo" href="#" aria-label="Rori — inicio">
+            <img src="assets/logo.png" alt="RORI" width="96" height="20">
+          </a><p>&emsp;</p>
+
+          <a class="topbar-link topbar-login" href="#">
+            <span uk-icon="icon: user; ratio: 0.8"></span>
+            <span class="topbar-label">ENTRAR| REGISTRARSE</span>
+          </a>
+
+          <a class="topbar-link hide-sm" href="#">
+            <span uk-icon="icon: phone; ratio: 0.8"></span>
+            <span class="topbar-label">ATENCIÒN AL CLIENTE </span>
+          </a>
+
+          <a class="topbar-link hide-sm" href="#">
+            <span uk-icon="icon: location; ratio: 0.8"></span>
+            <span class="topbar-label">NUESTRAS TÌENDAS</span>
+          </a>
+        </div>
+
+        <div class="topbar-right">
+          <form class="topbar-search" role="search">
+            <span class="topbar-search-icon" uk-icon="icon: search; ratio: 0.8"></span>
+            <input type="search" name="q" placeholder="Buscar" aria-label="Buscar productos" autocomplete="off">
+          </form>
+
+          <a class="icon-btn search-compact" href="#" aria-label="Buscar">
+            <span uk-icon="icon: search; ratio: 1"></span>
+          </a>
+
+          <a class="icon-btn" href="#" aria-label="Favoritos">
+            <span uk-icon="icon: heart; ratio: 1"></span>
+          </a>
+
+          <a class="icon-btn" href="#" aria-label="Carrito">
+            <span uk-icon="icon: cart; ratio: 1"></span>
+          </a>
+        </div>
+      </div>
+    </div>
+
+    <nav class="catbar" aria-label="Categorías">
+      <ul>
+        <li><a href="#">Tienda</a></li>
+        <li><a href="#">Caballero</a></li>
+        <li><a href="#">Dama</a></li>
+        <li><a href="#">Última Colección</a></li>
+        <li><a href="#">Outlet</a></li>
+        <li><a href="#">Ventas corporativas</a></li>
+        <li><a href="#">Sastrería a la medida</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <main>
+
+
+
+
+    <!-- HERO: carrusel UIkit. Cada <li> es un banner (5:2 = 1920×768) -->
+    <div class="hero-slider">
+      <div class="uk-position-relative uk-visible-toggle uk-light" tabindex="-1"
+           uk-slideshow="ratio: 5:2; animation: push; autoplay: true; autoplay-interval: 6000; pause-on-hover: true">
+
+        <ul class="uk-slideshow-items">
+          <li class="hero-slide" data-guide="HERO 1 · 2.5:1 · 1920×768" data-drop="hero-1">
+            <img src="banners/01-hero-desktop.png" data-banner="hero-1" alt="Banner principal 1" uk-cover>
+          </li>
+          <li class="hero-slide" data-guide="HERO 2 · 2.5:1 · 1920×768" data-drop="hero-2">
+            <img src="banners/02-hero-mobile.png" data-banner="hero-2" alt="Banner principal 2" uk-cover>
+          </li>
+          <li class="hero-slide" data-guide="HERO 2 · 2.5:1 · 1920×768" data-drop="hero-2">
+            <img src="banners/Frame-B.png" data-banner="Frame B" alt="Banner principal 2" uk-cover>
+          </li>
+          <li class="hero-slide" data-guide="HERO 2 · 2.5:1 · 1920×768" data-drop="hero-2">
+            <img src="banners/Frame-C.png" data-banner="Frame C" alt="Banner principal 2" uk-cover>
+          </li>
+          <!-- Para añadir otro banner: copia un <li>, cambia la imagen y añade su slot en el panel -->
+        </ul>
+
+        <a class="uk-position-center-left uk-position-small uk-hidden-hover" href="#"
+           uk-slidenav-previous uk-slideshow-item="previous" aria-label="Banner anterior"></a>
+        <a class="uk-position-center-right uk-position-small uk-hidden-hover" href="#"
+           uk-slidenav-next uk-slideshow-item="next" aria-label="Banner siguiente"></a>
+
+        <div class="hero-dots uk-position-bottom-center uk-position-small">
+          <ul class="uk-slideshow-nav uk-dotnav"></ul>
+        </div>
+      </div>
+    </div>
+
+
+
+
+
+
+
+
+
+    <section class="section">
+      <div class="container">
+        <h2 class="section-title">Lo Más Vendido en Ropa de Vestir</h2>
+
+        <div class="product-grid">
+          <a class="card" href="#">
+            <div class="card-media"><img src="assets/products/producto-05.jpg" alt="Saco azul medio con textura" loading="lazy"></div>
+            <div class="card-body">
+              <h3 class="card-title">Saco azul medio con textura</h3>
+              <p class="price">$145.00</p>
+            </div>
+          </a>
+
+          <a class="card" href="#">
+            <div class="card-media"><img src="assets/products/producto-10.png" alt="Saco negro sfoderato (deconstruido) 100% Lino Ilvento" loading="lazy"></div>
+            <div class="card-body">
+              <h3 class="card-title">Saco negro sfoderato (deconstruido) 100% Lino Ilvento</h3>
+              <p class="price">$145.00</p>
+            </div>
+          </a>
+
+          <a class="card" href="#">
+            <div class="card-media"><img src="assets/products/producto-07.jpg" alt="Saco gris oscuro con diseño de cuadros" loading="lazy"></div>
+            <div class="card-body">
+              <h3 class="card-title">Saco gris oscuro con diseño de cuadros</h3>
+              <p class="price">$145.00</p>
+            </div>
+          </a>
+
+          <a class="card" href="#">
+            <div class="card-media"><img src="assets/products/producto-08.jpg" alt="Saco azul claro con textura" loading="lazy"></div>
+            <div class="card-body">
+              <h3 class="card-title">Saco azul claro con textura</h3>
+              <p class="price">$145.00</p>
+            </div>
+          </a>
+
+          <a class="card" href="#">
+            <div class="card-media"><img src="assets/products/producto-09.png" alt="Camisa de rayas azul claro y blanco" loading="lazy"></div>
+            <div class="card-body">
+              <h3 class="card-title">Camisa de rayas azul claro y blanco</h3>
+              <p class="price">$116.00 <span class="price-old">$140.00</span></p>
+            </div>
+          </a>
+        </div>
+      </div>
+    </section>
+
+
+
+
+
+
+
+
+    <!-- SLOT 3: banner promocional intermedio -->
+    <!--<a class="promo banner-frame" href="#" data-guide="PROMO 1 · 3.5:1 · origen 1920×462"
+       data-drop="promo-medio">
+      <img src="banners/03-promo-medio.png" data-banner="promo-medio"
+           alt="Banner promocional" width="1920" height="462">
+    </a>-->
+
+
+   <!-- SLOT 3: banner promocional intermedio -->
+    <div class="hero-slider hero-slider-promo">
+      <div class="uk-position-relative uk-visible-toggle uk-light" tabindex="-1"
+           uk-slideshow="ratio: 1920:462; animation: push; autoplay: true; autoplay-interval: 6000; pause-on-hover: true">
+
+        <ul class="uk-slideshow-items">
+          <li class="hero-slide" data-guide="PROMO 1 · 4.156:1 · 1920×462" data-drop="hero-1">
+            <img src="banners/03-promo-medio.png" data-banner="hero-1" alt="Banner promocional 1" uk-cover>
+          </li>
+          <li class="hero-slide" data-guide="PROMO 2 · 4.156:1 · 1920×462" data-drop="hero-2">
+            <img src="banners/Frame-4.png" data-banner="hero-2" alt="Banner promocional 2" uk-cover>
+          </li>
+          <!-- Para añadir otro banner: copia un <li>, cambia la imagen y añade su slot en el panel -->
+        </ul>
+
+        <a class="uk-position-center-left uk-position-small uk-hidden-hover" href="#"
+           uk-slidenav-previous uk-slideshow-item="previous" aria-label="Banner anterior"></a>
+        <a class="uk-position-center-right uk-position-small uk-hidden-hover" href="#"
+           uk-slidenav-next uk-slideshow-item="next" aria-label="Banner siguiente"></a>
+
+        <div class="hero-dots uk-position-bottom-center uk-position-small">
+          <ul class="uk-slideshow-nav uk-dotnav"></ul>
+        </div>
+      </div>
+    </div>
+
+
+
+
+
+
+
+    <!-- SLOT 4 y 5: colecciones caballero / dama -->
+    <section class="collections" aria-label="Colecciones">
+      <a class="collection banner-frame" href="#" data-guide="COLECCIÓN CABALLERO · 1.39:1"
+         data-drop="coleccion-hombre">
+        <img src="banners/04-coleccion-hombre.png" data-banner="coleccion-hombre"
+             alt="Colección caballero" loading="lazy">
+        <span class="collection-label"><span>Caballero</span></span>
+      </a>
+
+      <a class="collection banner-frame" href="#" data-guide="COLECCIÓN DAMA · 1.39:1"
+         data-drop="coleccion-mujer">
+        <img src="banners/05-coleccion-mujer.png" data-banner="coleccion-mujer"
+             alt="Colección dama" loading="lazy">
+        <span class="collection-label"><span>Dama</span></span>
+      </a>
+    </section>
+
+    <section class="alt-section">
+      <div class="container">
+        <h2 class="alt-title">Última Colección</h2>
+
+        <div class="alt-grid">
+          <a class="alt-card" href="#">
+            <img src="assets/products/producto-05.jpg" alt="Saco azul medio con textura" loading="lazy">
+            <h3 class="card-title">Saco azul medio con textura</h3>
+            <p class="price">$145.00</p>
+          </a>
+          <a class="alt-card" href="#">
+            <img src="assets/products/producto-06.jpg" alt="Saco gris medio con diseño de cuadros" loading="lazy">
+            <h3 class="card-title">Saco gris medio con diseño de cuadros</h3>
+            <p class="price">$145.00</p>
+          </a>
+          <a class="alt-card" href="#">
+            <img src="assets/products/producto-07.jpg" alt="Saco gris oscuro con diseño de cuadros" loading="lazy">
+            <h3 class="card-title">Saco gris oscuro con diseño de cuadros</h3>
+            <p class="price">$145.00</p>
+          </a>
+          <a class="alt-card" href="#">
+            <img src="assets/products/producto-08.jpg" alt="Saco azul claro con textura" loading="lazy">
+            <h3 class="card-title">Saco azul claro con textura</h3>
+            <p class="price">$145.00</p>
+          </a>
+        </div>
+      </div>
+    </section>
+
+    <!-- SLOT 6: banner promocional final -->
+    <a class="promo banner-frame promo-last" href="#" data-guide="PROMO 2 · 3.5:1 · origen 1920×462"
+       data-drop="promo-final">
+      <img src="banners/06-promo-final.png" data-banner="promo-final"
+           alt="Banner promocional" loading="lazy" width="1920" height="462">
+    </a>
+  </main>
+
+  <footer class="site-footer">
+    <div class="map-cta">
+      <p class="map-eyebrow">Celebramos 60 años de historia con</p>
+      <h2>Mapa de Nuestras Tiendas</h2>
+      <a class="btn-map" href="#">Ver tiendas</a>
+    </div>
+
+    <div class="footer-social">
+      <a class="footer-social-link" href="https://www.facebook.com/tiendasrori" target="_blank" rel="noopener noreferrer" aria-label="Facebook">
+        <svg viewBox="0 0 24 24" width="32" height="32" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+          <path d="M18 2h-3a5 5 0 0 0-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 0 1 1-1h3z"/>
+        </svg>
+      </a>
+
+      <a class="footer-social-link" href="https://www.tiktok.com/@tiendasrori" target="_blank" rel="noopener noreferrer" aria-label="TikTok">
+        <svg viewBox="0 0 24 24" width="32" height="32" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+          <path d="M9 12a4 4 0 1 0 4 4V4a5 5 0 0 0 5 5"/>
+        </svg>
+      </a>
+
+      <a class="footer-social-link" href="https://www.instagram.com/tiendasrori/" target="_blank" rel="noopener noreferrer" aria-label="Instagram">
+        <svg viewBox="0 0 24 24" width="32" height="32" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+          <rect width="20" height="20" x="2" y="2" rx="5" ry="5"/>
+          <path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"/>
+          <line x1="17.5" x2="17.51" y1="6.5" y2="6.5"/>
+        </svg>
+      </a>
+    </div>
+
+    <div class="footer-links">
+      <div class="footer-links-row">
+        <a href="#">Preguntas frecuentes</a>
+        <a href="#">¿Cómo comprar?</a>
+        <a href="#">¿Quiénes somos?</a>
+      </div>
+      <div class="footer-links-row">
+        <a href="#">Políticas, Términos y Condiciones Generales</a>
+        <a href="#">Políticas de Devolución, Reembolso y Garantía</a>
+        <a href="#">Glosario</a>
+      </div>
+    </div>
+
+    <p class="copyright">Copyright © 2026. Vista previa local con fines de diseño.</p>
+  </footer>
+
+  <!-- ====================== EDITOR DE BANNERS ====================== -->
+  <button class="fab" id="open-panel" type="button" aria-controls="banner-panel" aria-expanded="false">
+    <svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="1.8" aria-hidden="true">
+      <rect x="3" y="4" width="18" height="16" rx="2"/><path d="m3 16 5-5 4 4 3-3 6 6"/><circle cx="9" cy="9" r="1.4"/>
+    </svg>
+    Editar banners
+  </button>
+
+  <aside class="panel" id="banner-panel" aria-label="Editor de banners" aria-hidden="true">
+    <div class="panel-head">
+      <div>
+        <h2>Editor de banners</h2>
+        <p>Carga una imagen y verás el corte real en la página.</p>
+      </div>
+      <button class="icon-btn" id="close-panel" type="button" aria-label="Cerrar editor">✕</button>
+    </div>
+
+    <div class="panel-tools">
+      <label class="switch">
+        <input type="checkbox" id="guides-toggle">
+        <span>Mostrar guías y medidas</span>
+      </label>
+    </div>
+
+    <div class="panel-body">
+
+      <div class="slot">
+        <div class="slot-head"><strong>Hero · banner 1</strong><span>1920×768 · 2.5:1</span></div>
+        <img class="slot-thumb" data-banner="hero-1" src="banners/01-hero-desktop.png" alt="">
+        <div class="slot-actions">
+          <label class="btn">Elegir imagen<input type="file" accept="image/*" data-slot="hero-1"></label>
+          <button class="btn btn-ghost" type="button" data-reset="hero-1">Restaurar</button>
+        </div>
+      </div>
+
+      <div class="slot">
+        <div class="slot-head"><strong>Hero · banner 2</strong><span>1920×768 · 2.5:1</span></div>
+        <img class="slot-thumb" data-banner="hero-2" src="banners/02-hero-mobile.png" alt="">
+        <div class="slot-actions">
+          <label class="btn">Elegir imagen<input type="file" accept="image/*" data-slot="hero-2"></label>
+          <button class="btn btn-ghost" type="button" data-reset="hero-2">Restaurar</button>
+        </div>
+      </div>
+
+      <div class="slot">
+        <div class="slot-head"><strong>Promocional 1</strong><span>1920×462 · se recorta 3.5:1</span></div>
+        <img class="slot-thumb" data-banner="promo-medio" src="banners/03-promo-medio.png" alt="">
+        <div class="slot-actions">
+          <label class="btn">Elegir imagen<input type="file" accept="image/*" data-slot="promo-medio"></label>
+          <button class="btn btn-ghost" type="button" data-reset="promo-medio">Restaurar</button>
+        </div>
+      </div>
+
+      <div class="slot">
+        <div class="slot-head"><strong>Colección caballero</strong><span>704×527 · 1.39:1</span></div>
+        <img class="slot-thumb" data-banner="coleccion-hombre" src="banners/04-coleccion-hombre.png" alt="">
+        <div class="slot-actions">
+          <label class="btn">Elegir imagen<input type="file" accept="image/*" data-slot="coleccion-hombre"></label>
+          <button class="btn btn-ghost" type="button" data-reset="coleccion-hombre">Restaurar</button>
+        </div>
+      </div>
+
+      <div class="slot">
+        <div class="slot-head"><strong>Colección dama</strong><span>704×527 · 1.39:1</span></div>
+        <img class="slot-thumb" data-banner="coleccion-mujer" src="banners/05-coleccion-mujer.png" alt="">
+        <div class="slot-actions">
+          <label class="btn">Elegir imagen<input type="file" accept="image/*" data-slot="coleccion-mujer"></label>
+          <button class="btn btn-ghost" type="button" data-reset="coleccion-mujer">Restaurar</button>
+        </div>
+      </div>
+
+      <div class="slot">
+        <div class="slot-head"><strong>Promocional 2</strong><span>1920×462 · se recorta 3.5:1</span></div>
+        <img class="slot-thumb" data-banner="promo-final" src="banners/06-promo-final.png" alt="">
+        <div class="slot-actions">
+          <label class="btn">Elegir imagen<input type="file" accept="image/*" data-slot="promo-final"></label>
+          <button class="btn btn-ghost" type="button" data-reset="promo-final">Restaurar</button>
+        </div>
+      </div>
+
+      <button class="btn btn-block btn-ghost" id="reset-all" type="button">Restaurar todos los banners</button>
+      <p class="panel-help">También puedes arrastrar una imagen directamente sobre cualquier banner de la página. Pulsa <kbd>G</kbd> para ver u ocultar las guías.</p>
+    </div>
+  </aside>
+
+  <div class="toast" id="toast" role="status" aria-live="polite"></div>
+
+<!-- UIkit JS -->
+<script src="https://cdn.jsdelivr.net/npm/uikit@3.21.9/dist/js/uikit.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/uikit@3.21.9/dist/js/uikit-icons.min.js"></script>
+<script src="js/app.js"></script>
+</body>
+</html>
