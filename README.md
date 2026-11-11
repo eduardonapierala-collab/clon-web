@@ -63,7 +63,9 @@ web/
 - Las imágenes de banner y producto son las públicas actuales del sitio, usadas como referencia
   visual. Sustitúyelas por las tuyas.
 - El header es `sticky` y el contenido arranca 15 px debajo (igual que el original).
-- La rejilla de producto es 3 columnas en escritorio, 2 en tablet y 1 en móvil.
+- La rejilla de producto pasa de 5 columnas en escritorio a 4 (≤1199 px), 3 (≤1023 px) y
+  2 (≤767 px). «Última Colección» usa 4, 2 y 2 columnas en esos mismos rangos. Las tarjetas
+  ajustan padding, tipografía y separación con `clamp()`.
 - Las tarjetas de producto usan fotos de relleno: el objetivo del proyecto son los banners.
 - `banners/05-coleccion-hombre.png` y `banners/mapa.png` están disponibles como alternativas,
   pero la página no las usa por defecto.
