@@ -168,9 +168,10 @@
 
 
     <!-- SLOT 3: banner promocional intermedio -->
-    <!--<a class="promo banner-frame" href="#" data-guide="PROMO 1 · 3.5:1 · origen 1920×462"
-       data-drop="promo-medio">
-      <img src="banners/03-promo-medio.png" data-banner="promo-medio"
+    <!-- Alternativa estática (sustituida por el carrusel promocional):
+    <a class="promo banner-frame" href="#" data-guide="PROMO 1 · 4.156:1 · origen 1920×462"
+       data-drop="promo-medio-1">
+      <img src="banners/rori-medio-A.png" data-banner="promo-medio-1"
            alt="Banner promocional" width="1920" height="462">
     </a>-->
 
@@ -181,11 +182,11 @@
            uk-slideshow="ratio: 1920:462; animation: push; autoplay: true; autoplay-interval: 6000; pause-on-hover: true">
 
         <ul class="uk-slideshow-items">
-          <li class="hero-slide" data-guide="PROMO 1 · 4.156:1 · 1920×462" data-drop="hero-1">
-            <img src="banners/rori-medio-A.png" data-banner="hero-1" alt="Banner promocional 1" uk-cover>
+          <li class="hero-slide" data-guide="PROMO 1 · 4.156:1 · 1920×462" data-drop="promo-medio-1">
+            <img src="banners/rori-medio-A.png" data-banner="promo-medio-1" alt="Banner promocional 1" uk-cover>
           </li>
-          <li class="hero-slide" data-guide="PROMO 2 · 4.156:1 · 1920×462" data-drop="hero-2">
-            <img src="banners/rori-medio-B.png" data-banner="hero-2" alt="Banner promocional 2" uk-cover>
+          <li class="hero-slide" data-guide="PROMO 2 · 4.156:1 · 1920×462" data-drop="promo-medio-2">
+            <img src="banners/rori-medio-B.png" data-banner="promo-medio-2" alt="Banner promocional 2" uk-cover>
           </li>
           <!-- Para añadir otro banner: copia un <li>, cambia la imagen y añade su slot en el panel -->
         </ul>
@@ -253,12 +254,30 @@
       </div>
     </section>
 
-    <!-- SLOT 6: banner promocional final -->
-    <a class="promo banner-frame promo-last" href="#" data-guide="PROMO 2 · 3.5:1 · origen 1920×462"
-       data-drop="promo-final">
-      <img src="banners/06-promo-final.png" data-banner="promo-final"
-           alt="Banner promocional" loading="lazy" width="1920" height="462">
-    </a>
+    <!-- SLOT 6: banner promocional final (carrusel) -->
+    <div class="hero-slider hero-slider-promo promo-last">
+      <div class="uk-position-relative uk-visible-toggle uk-light" tabindex="-1"
+           uk-slideshow="ratio: 1920:462; animation: push; autoplay: true; autoplay-interval: 6000; pause-on-hover: true">
+
+        <ul class="uk-slideshow-items">
+          <li class="hero-slide" data-guide="PROMO FINAL 1 · 4.156:1 · 1920×462" data-drop="promo-final">
+            <img src="banners/06-promo-final.png" data-banner="promo-final" alt="Banner promocional final 1" uk-cover>
+          </li>
+          <li class="hero-slide" data-guide="PROMO FINAL 2 · 4.156:1 · 1920×462" data-drop="promo-final-2">
+            <img src="banners/07-promo-final.png" data-banner="promo-final-2" alt="Banner promocional final 2" uk-cover>
+          </li>
+        </ul>
+
+        <a class="uk-position-center-left uk-position-small uk-hidden-hover" href="#"
+           uk-slidenav-previous uk-slideshow-item="previous" aria-label="Banner anterior"></a>
+        <a class="uk-position-center-right uk-position-small uk-hidden-hover" href="#"
+           uk-slidenav-next uk-slideshow-item="next" aria-label="Banner siguiente"></a>
+
+        <div class="hero-dots uk-position-bottom-center uk-position-small">
+          <ul class="uk-slideshow-nav uk-dotnav"></ul>
+        </div>
+      </div>
+    </div>
   </main>
 
   <footer class="site-footer">
@@ -334,7 +353,7 @@
 
       <div class="slot">
         <div class="slot-head"><strong>Hero · banner 1</strong><span>1920×768 · 2.5:1</span></div>
-        <img class="slot-thumb" data-banner="hero-1" src="banners/01-hero-desktop.png" alt="">
+        <img class="slot-thumb" data-banner="hero-1" src="banners/03A-hero-desktop.png" alt="">
         <div class="slot-actions">
           <label class="btn">Elegir imagen<input type="file" accept="image/*" data-slot="hero-1"></label>
           <button class="btn btn-ghost" type="button" data-reset="hero-1">Restaurar</button>
@@ -343,7 +362,7 @@
 
       <div class="slot">
         <div class="slot-head"><strong>Hero · banner 2</strong><span>1920×768 · 2.5:1</span></div>
-        <img class="slot-thumb" data-banner="hero-2" src="banners/02-hero-mobile.png" alt="">
+        <img class="slot-thumb" data-banner="hero-2" src="banners/02-hero-desktop.png" alt="">
         <div class="slot-actions">
           <label class="btn">Elegir imagen<input type="file" accept="image/*" data-slot="hero-2"></label>
           <button class="btn btn-ghost" type="button" data-reset="hero-2">Restaurar</button>
@@ -351,11 +370,20 @@
       </div>
 
       <div class="slot">
-        <div class="slot-head"><strong>Promocional 1</strong><span>1920×462 · se recorta 3.5:1</span></div>
-        <img class="slot-thumb" data-banner="promo-medio" src="banners/03-promo-medio.png" alt="">
+        <div class="slot-head"><strong>Promocional 1 · banner 1</strong><span>1920×462 · 4.156:1</span></div>
+        <img class="slot-thumb" data-banner="promo-medio-1" src="banners/rori-medio-A.png" alt="">
         <div class="slot-actions">
-          <label class="btn">Elegir imagen<input type="file" accept="image/*" data-slot="promo-medio"></label>
-          <button class="btn btn-ghost" type="button" data-reset="promo-medio">Restaurar</button>
+          <label class="btn">Elegir imagen<input type="file" accept="image/*" data-slot="promo-medio-1"></label>
+          <button class="btn btn-ghost" type="button" data-reset="promo-medio-1">Restaurar</button>
+        </div>
+      </div>
+
+      <div class="slot">
+        <div class="slot-head"><strong>Promocional 1 · banner 2</strong><span>1920×462 · 4.156:1</span></div>
+        <img class="slot-thumb" data-banner="promo-medio-2" src="banners/rori-medio-B.png" alt="">
+        <div class="slot-actions">
+          <label class="btn">Elegir imagen<input type="file" accept="image/*" data-slot="promo-medio-2"></label>
+          <button class="btn btn-ghost" type="button" data-reset="promo-medio-2">Restaurar</button>
         </div>
       </div>
 
@@ -377,14 +405,31 @@
         </div>
       </div>
 
+
+
+      
+
       <div class="slot">
-        <div class="slot-head"><strong>Promocional 2</strong><span>1920×462 · se recorta 3.5:1</span></div>
+        <div class="slot-head"><strong>Promocional final · banner 1</strong><span>1920×462 · 4.156:1</span></div>
         <img class="slot-thumb" data-banner="promo-final" src="banners/06-promo-final.png" alt="">
         <div class="slot-actions">
           <label class="btn">Elegir imagen<input type="file" accept="image/*" data-slot="promo-final"></label>
           <button class="btn btn-ghost" type="button" data-reset="promo-final">Restaurar</button>
         </div>
       </div>
+
+      <div class="slot">
+        <div class="slot-head"><strong>Promocional final · banner 2</strong><span>1920×462 · 4.156:1</span></div>
+        <img class="slot-thumb" data-banner="promo-final-2" src="banners/07-promo-final.png" alt="">
+        <div class="slot-actions">
+          <label class="btn">Elegir imagen<input type="file" accept="image/*" data-slot="promo-final-2"></label>
+          <button class="btn btn-ghost" type="button" data-reset="promo-final-2">Restaurar</button>
+        </div>
+      </div>
+
+
+
+
 
       <button class="btn btn-block btn-ghost" id="reset-all" type="button">Restaurar todos los banners</button>
       <p class="panel-help">También puedes arrastrar una imagen directamente sobre cualquier banner de la página. Pulsa <kbd>G</kbd> para ver u ocultar las guías.</p>
