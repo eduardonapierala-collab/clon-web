@@ -28,19 +28,23 @@ Pulsa **G** (o marca *Mostrar guías y medidas*) para ver el encuadre y las medi
 
 | Slot | Archivo por defecto | Medida origen | Proporción en pantalla |
 | --- | --- | --- | --- |
-| Carrusel · banner 1 | `banners/01-hero-desktop.png` | 1920×768 | 2.5:1 |
-| Carrusel · banner 2 | `banners/02-hero-mobile.png` | 1920×768 | 2.5:1 |
-| Promocional 1 | `banners/03-promo-medio.png` | 1920×462 | 3.5:1 (`object-fit: cover`) |
+| Carrusel · banner 1 | `banners/03A-hero-desktop.png` | 1920×768 | 2.5:1 |
+| Carrusel · banner 2 | `banners/02-hero-desktop.png` | 1920×768 | 2.5:1 |
+| Promocional 1 · banner 1 | `banners/rori-medio-A.png` | 1920×462 | 4.156:1 |
+| Promocional 1 · banner 2 | `banners/rori-medio-B.png` | 1920×462 | 4.156:1 |
 | Colección caballero | `banners/04-coleccion-hombre.png` | 704×527 | 1.39:1 |
 | Colección dama | `banners/05-coleccion-mujer.png` | 704×527 | 1.39:1 |
-| Promocional 2 | `banners/06-promo-final.png` | 1920×462 | 3.5:1 (`object-fit: cover`) |
+| Promocional final · banner 1 | `banners/06-promo-final.png` | 1920×462 | 4.156:1 |
+| Promocional final · banner 2 | `banners/07-promo-final.png` | 1920×462 | 4.156:1 |
 
-El hero es un carrusel de **UIkit 3** (`uk-slideshow`) con proporción `5:2`. Cada `<li>` de
+Hay tres carruseles de **UIkit 3** (`uk-slideshow`): el hero con proporción `5:2` y dos
+promocionales con proporción `1920:462` (intermedio y final). Cada `<li>` de
 `uk-slideshow-items` es un banner. Para añadir otro: copia un `<li>`, cambia su `src` y su
-`data-banner`, y añade el slot correspondiente en el panel del editor.
+`data-banner` (usa un nombre de slot único) y añade el slot correspondiente en el panel del
+editor.
 
-Recomendación: exporta los banners del carrusel a **1920×768** y los promocionales a
-**1920×549** (3.5:1) si quieres que no se recorte nada. Los banners de colección funcionan
+Recomendación: exporta los banners del hero a **1920×768** y todos los promocionales a
+**1920×462** (4.156:1) si quieres que no se recorte nada. Los banners de colección funcionan
 bien a **1400×1010** (1.39:1).
 
 ## Estructura
@@ -61,4 +65,6 @@ web/
 - El header es `sticky` y el contenido arranca 15 px debajo (igual que el original).
 - La rejilla de producto es 3 columnas en escritorio, 2 en tablet y 1 en móvil.
 - Las tarjetas de producto usan fotos de relleno: el objetivo del proyecto son los banners.
+- `banners/05-coleccion-hombre.png` y `banners/mapa.png` están disponibles como alternativas,
+  pero la página no las usa por defecto.
 - Si vas a publicar esta maqueta, necesitas autorización sobre la marca, los textos y las imágenes.
